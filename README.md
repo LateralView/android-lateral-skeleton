@@ -2,6 +2,8 @@
 
 This is an Android Skeleton built by lateral developers so new projects can grow from this following our standars. In the wiki you will find an explanation of the architecture of directories and files, naming conventions, good practices, utils included on the project, etc.
 
+### Index of contents
+
 - [Home](../../wiki)
 - [Android Fundamentals](../../wiki/Android-Fundamentals)
 - [Android Studio Configuration](../../wiki/Android-Studio-Configuration)
