@@ -13,3 +13,5 @@ This is an Android Skeleton built by lateral developers so new projects can grow
 - [Libraries on the skel](../../wiki/Libraries-on-the-skel)
 - [Managers and Utils on the skel](../../wiki/Managers-and-Utils-on-the-skel)
 - [Naming conventions](../../wiki/Naming-conventions)
+
+For any suggestions or if you want to join our team please contact us via [android@lateralview.net](mailto: android@lateralview.net)
