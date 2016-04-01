@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="primary">#208dd9</color>
+    <color name="primary_dark">#2071ab</color>
+    <color name="primary_selected">#81C6FE</color>
+
+    <color name="statusbar_color">#000000</color>
+
+    <color name="app_background">#1C1C1C</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="grey1">#808080</color>
+
 </resources>
