@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/app_background</item>
+
+        <item name="android:textColor">@color/grey1</item>
+
+        <item name="actionMenuTextColor">@color/primary_dark</item>
+
+        <item name="windowActionBar">false</item>
+
+        <item name="colorPrimary">@color/primary</item>
+
+        <item name="colorPrimaryDark">@color/primary</item>
+
+        <item name="colorAccent">@color/primary</item>
+
+        <item name="colorControlNormal">@color/white</item>
+
+        <item name="drawerArrowStyle">@style/MyDrawerArrowToggle</item>
+
+        <item name="android:dialogTheme">@style/AppTheme.DialogTheme</item>
+
+    </style>
+
+    <style name="MyDrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="AppTheme.DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/primary</item>
+    </style>
+
+</resources>
