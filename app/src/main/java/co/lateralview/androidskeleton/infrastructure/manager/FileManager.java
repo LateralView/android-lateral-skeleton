@@ -11,7 +11,7 @@ import java.util.Date;
 
 public class FileManager
 {
-	private static final String FILE_TEMP_PREFIX = "KOLLECTIN";
+	private static final String FILE_TEMP_PREFIX = "SKELETON";
 
 	public static File createPhotoFile()
 	{
