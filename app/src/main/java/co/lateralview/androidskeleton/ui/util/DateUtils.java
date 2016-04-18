@@ -32,9 +32,6 @@ public class DateUtils
 	public final static String MM_DD_YY_SLASH = "MM/dd/yy";
 	public final static String YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd'T'HH:mm:ss";
 
-	public static final String MONTH_FORMAT_FULL = "MMMM";
-	public static final String DAY_FORMAT_FULL = "EEEE";
-
 	public static Date getDateFromDateFormat(String dateString, String dateFormat)
 	{
 		DateFormat formatter = new SimpleDateFormat(dateFormat);
@@ -218,6 +215,11 @@ public class DateUtils
 		return diff;
 	}
 
+	public static int getDiffDays(Date first, Date last)
+	{
+		return (int) ((last.getTime() - first.getTime()) / (1000 * 60 * 60 * 24));
+	}
+
 	public static Calendar getCalendar(Date date)
 	{
 		Calendar cal = Calendar.getInstance(Locale.US);
@@ -235,53 +237,8 @@ public class DateUtils
 		return sdf.format(date);
 	}
 
-	public static String getWeekOfYear(Date date)
+	public static Date dateFromUnixtimestamp(int unixtimestamp)
 	{
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(date);
-		return String.valueOf(calendar.get(Calendar.WEEK_OF_YEAR));
-	}
-
-	public static String getMonthName(Date date)
-	{
-		return new SimpleDateFormat(MONTH_FORMAT_FULL, Locale.ENGLISH).format(date);
-	}
-
-	public static String getDay(Date date)
-	{
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(date);
-		return String.valueOf(calendar.get(Calendar.DATE));
-	}
-
-	public static String getDayOfWeek(Date date)
-	{
-		return new SimpleDateFormat(DAY_FORMAT_FULL, Locale.ENGLISH).format(date);
-	}
-
-	public static String getYear(Date date)
-	{
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(date);
-		return String.valueOf(calendar.get(Calendar.YEAR));
-	}
-
-	public static String getDayOfMonthSuffix(final int n)
-	{
-		if (n >= 11 && n <= 13)
-		{
-			return "th";
-		}
-		switch (n % 10)
-		{
-			case 1:
-				return "st";
-			case 2:
-				return "nd";
-			case 3:
-				return "rd";
-			default:
-				return "th";
-		}
+		return new Date(unixtimestamp * 1000L);
 	}
 }

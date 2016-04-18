@@ -59,6 +59,31 @@ public class CameraManager
 		return photoFile;
 	}
 
+	public void processResult(int requestCode, int resultCode, Intent data)
+	{
+		if (resultCode == Activity.RESULT_OK)
+		{
+			switch (requestCode)
+			{
+				case REQUEST_CROP_IMAGE:
+				{
+					onRequestTakePhotoCropSuccess(data);
+					break;
+				}
+				case REQUEST_TAKE_PHOTO:
+				{
+					onRequestTakePhotoSuccess();
+					break;
+				}
+				case REQUEST_TAKE_PHOTO_CROP:
+				{
+					new CropManager(mCallerActivity, REQUEST_CROP_IMAGE).requestCrop(Uri.fromFile(mPhotoFile));
+					break;
+				}
+			}
+		}
+	}
+
 	private void onRequestTakePhotoSuccess()
 	{
 		Bitmap imageBitmap = BitmapFactory.decodeFile(mPhotoFile.getAbsolutePath());

@@ -1,26 +1,20 @@
 package co.lateralview.androidskeleton.ui.util;
 
-import java.text.DecimalFormat;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class MathUtils
 {
-
-	public static String toRoundedString(float number)
+	public static float round(float value, int places)
 	{
-		if (number < 1000)
+		if (places < 0)
 		{
-			return "" + number;
+			throw new IllegalArgumentException();
 		}
-		int exp = (int) (Math.log(number) / Math.log(1000));
-		return String.format("%.1f %c",
-				number / Math.pow(1000, exp),
-				"KMGTPE".charAt(exp - 1));
-	}
 
-	public static String formatFloatString(String str)
-	{
-		DecimalFormat formatter = new DecimalFormat("#,###.##");
-		return formatter.format(Double.parseDouble(str));
+		BigDecimal bd = new BigDecimal(value);
+		bd = bd.setScale(places, RoundingMode.HALF_UP);
+		return bd.floatValue();
 	}
-
 }

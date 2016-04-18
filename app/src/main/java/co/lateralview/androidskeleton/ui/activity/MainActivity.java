@@ -1,7 +1,7 @@
 package co.lateralview.androidskeleton.ui.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import co.lateralview.androidskeleton.R;
 
