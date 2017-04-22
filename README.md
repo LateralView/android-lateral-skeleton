@@ -1,7 +1,7 @@
 
 ### Deprecated 
 
-[Check our new repository with the best tools of the Android Team](https://github.com/LateralView/android-base-project)
+[Check our new repository with the best tools of our Android Team](https://github.com/LateralView/android-base-project)
 
 # Android Lateral Skeleton
 
@@ -23,4 +23,4 @@ This is an Android Skeleton built by lateral developers so new projects can grow
 - [Testing with Robolectric](../../wiki/Testing-with-Robolectric)
 - [Useful Libraries](../../wiki/Useful-Libraries)
 
-For any suggestions or if you want to join our team please contact us via [android@lateralview.net](mailto: android@lateralview.net)
+For any suggestions or if you want to join our team please contact us via [android@lateralview.net](mailto:android@lateralview.net)
